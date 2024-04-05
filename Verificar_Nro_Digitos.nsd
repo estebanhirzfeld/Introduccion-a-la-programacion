@@ -1,32 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<root xmlns:nsd="https://structorizer.fisch.lu" version="3.32-19" preRepeat="until " postFor="to" preReturn="return" postForIn="in" preWhile="while " output="OUTPUT" input="INPUT" preFor="for" preExit="exit" preLeave="leave" ignoreCase="true" preThrow="throw" preForIn="foreach" stepFor="by" namespace="" author="Alumno" created="2024-04-05" changedby="Alumno" changed="2024-04-05" origin="Structorizer 3.32-19" text="&#34;Verificar_Nro_Digitos&#34;" comment="&#34;&#34;" color="ffffff" type="program" style="nice">
+<root xmlns:nsd="https://structorizer.fisch.lu" version="3.32-19" preRepeat="until " postFor="to" preReturn="return" postForIn="in" preWhile="while " output="OUTPUT" input="INPUT" preFor="for" preExit="exit" preLeave="leave" ignoreCase="true" preThrow="throw" preForIn="foreach" stepFor="by" author="Alumno" created="2024-04-05" changedby="Alumno" changed="2024-04-05" origin="Structorizer 3.32-19" text="&#34;Verificar_Nro_Digitos&#34;" comment="" color="ffffff" type="program" style="nice">
 	<children>
-		<while text="&#34;while (true)&#34;" comment="&#34;&#34;" color="ffffff" disabled="0">
+		<while text="&#34;while (true)&#34;" comment="" color="ffffff" disabled="0">
 			<qWhile>
-				<instruction text="&#34;INPUT nro&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
-				<alternative text="&#34;nro&#60;=9 &amp;&amp; nro&#62;=0&#34;" comment="&#34;&#34;" color="ffffff" disabled="0">
+				<instruction text="&#34;INPUT nro&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+				<instruction text="&#34;nro &#60;- abs(nro)&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+				<alternative text="&#34;nro&#60;=9 &amp;&amp; nro&#62;=0&#34;" comment="" color="ffffff" disabled="0">
 					<qTrue>
-						<instruction text="&#34;OUTPUT nro + &#34;&#34;: Tiene 1 Digito&#34;&#34;&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+						<instruction text="&#34;OUTPUT nro + &#34;&#34;: Tiene 1 Digito&#34;&#34;&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
 					</qTrue>
 					<qFalse>
-						<alternative text="&#34;(nro&#60;0)&#34;" comment="&#34;&#34;" color="ffffff" disabled="0">
+						<alternative text="&#34;(nro&#60;=99)&#34;" comment="" color="ffffff" disabled="0">
 							<qTrue>
-								<instruction text="&#34;OUTPUT &#34;&#34;Error: Fuera de Rango&#34;&#34;&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+								<instruction text="&#34;OUTPUT nro + &#34;&#34;: Tiene 2 Digitos&#34;&#34;&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
 							</qTrue>
 							<qFalse>
-								<alternative text="&#34;(nro&#60;=99)&#34;" comment="&#34;&#34;" color="ffffff" disabled="0">
+								<alternative text="&#34;(nro&#60;=999)&#34;" comment="" color="ffffff" disabled="0">
 									<qTrue>
-										<instruction text="&#34;OUTPUT nro + &#34;&#34;: Tiene 2 Digitos&#34;&#34;&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+										<instruction text="&#34;OUTPUT nro + &#34;&#34;: Tiene 3 Digitos&#34;&#34;&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
 									</qTrue>
 									<qFalse>
-										<alternative text="&#34;(nro&#60;=999)&#34;" comment="&#34;&#34;" color="ffffff" disabled="0">
-											<qTrue>
-												<instruction text="&#34;OUTPUT nro + &#34;&#34;: Tiene 3 Digitos&#34;&#34;&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
-											</qTrue>
-											<qFalse>
-												<instruction text="&#34;OUTPUT &#34;&#34;Error: Fuera de Rango&#34;&#34;&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
-											</qFalse>
-										</alternative>
+										<instruction text="&#34;OUTPUT &#34;&#34;Error: Fuera de Rango&#34;&#34;&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
 									</qFalse>
 								</alternative>
 							</qFalse>
