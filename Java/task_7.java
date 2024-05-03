@@ -3,21 +3,11 @@ import java.util.Scanner;
 
 
 public class task_6 {
-    public static void draw(Integer x, Integer y) {
-        System.out.println(x + "" + y);
-    }
-    public static void main(String[] args){
-        Scanner sc = new Scanner(System.in);
+    public static void draw(Integer filas, Integer columnas) {
         String line = "";
-        // String line = "* * * * * * * *";
         String space = "*";
         
         
-        System.out.println("Ingrese cant de columnas");
-        int columnas = sc.nextInt();
-        System.out.println("Ingrese cant de filas");
-        int filas = sc.nextInt();
-
         // Columnas
         for (int i = 0; i < columnas; i++) {
             line = line + "* ";
@@ -36,7 +26,13 @@ public class task_6 {
 
         System.out.println(line.strip());
 
-        System.out.println("line: " + line.length());
-        System.out.println("space: " + space.length());
+    }
+    public static void main(String[] args){
+        for (int i = 0; i < 10; i++) {
+            draw(i, i);
+        }
+        for (int i = 10; i < 0; i--) {
+            draw(i, i);
+        }
     }
 }
